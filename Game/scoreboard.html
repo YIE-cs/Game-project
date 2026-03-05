@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="css/scoreboard.css">
+</head>
+<body class="scoreboard-page">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="scoreboard.html">Rankings</a></li>
+            <li id="logout-item" style="display: none;"></li>
+        </ul>
+    </nav>
+
+    <h1>Scoreboard</h1>
+    <div id="scoreboard-container">
+        <table id="scoreboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>High Score</th>
+                </tr>
+            </thead>
+            <tbody id="scoreboard-body"></tbody>
+        </table>
+        <p id="message"></p>
+    </div>
+
+    <script src="js/scoreboard.js"></script>
+</body>
+</html>

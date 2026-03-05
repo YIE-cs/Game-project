@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="registration-page">
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="scoreboard.html">Rankings</a></li>
+        </ul>
+    </nav>
+
+    <h1>Register</h1>
+
+    <form id="Registrationform" novalidate>
+        <label>Username</label>
+        <input type="text" id="username" placeholder="choose a username">
+
+        <label>Date Of birth</label>
+        <input type="date" id="dob" placeholder="Date of birth" required>
+        
+        <label>phone number</label>
+        <input type="tel" id="phone-num" placeholder="+230" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+        <label>Password:</label>
+        <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Create your password">
+            <i id="togglePassword" class="fa-solid fa-eye-slash"></i>
+        </div>
+        <div id="strength-bar"></div>
+        <p id="strength-text"></p>
+
+        <label>Confirm Password:</label>
+        <div class="password-wrapper">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password"><br><br>
+            <i id="toggleConfirmPassword" class="fa-solid fa-eye-slash"></i>
+        </div>
+         <p id="message"></p>
+
+
+        <p>Already have an account? <a href="login.html">log in</a> here</p>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+        
+        <p>&copy; 2025 Shadow Phaser. All rights reserved.</p>
+    </footer>
+
+    <script src="js/registration.js"></script>
+</body>
+</html>

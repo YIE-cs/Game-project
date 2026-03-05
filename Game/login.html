@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="scoreboard.html">Rankings</a></li>
+        </ul>
+    </nav>
+
+    <p id="message"></p>
+
+    <div class="wrapper">
+        <h1>Login</h1>
+        <form id="loginform" novalidate>
+            <div class="input-box">
+                <input type="email" id="email" placeholder="enter your email address">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <br>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="enter your password">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <br>
+            <div class="Remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <button type="submit" class="lgn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="registration.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shadow Phaser. All rights reserved.</p>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html> 

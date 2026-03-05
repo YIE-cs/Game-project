@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px 0; /* Padding to prevent navbar overlap */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452, #1c2526, #0a0a0a);
+    background-size: 400%;
+    animation: colorShift 15s ease infinite;
+    font-family: 'Orbitron', sans-serif;
+    overflow-y: auto; /* Allow scrolling if needed */
+}
+
+/* Background animation */
+@keyframes colorShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 400% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Particle effect for background */
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)" /></svg>');
+    background-size: 20px;
+    animation: particleFloat 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1000px);
+    }
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar ul li a:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Form title */
+h1 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin: 80px 0 20px; /* Ensure visibility below navbar */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Form container */
+form#Registrationform {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 15px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Consistent spacing between elements */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form#Registrationform:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Labels */
+form#Registrationform label {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+form#Registrationform input {
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-radius: 40px;
+    padding: 0 45px 0 20px;
+    color: #fff;
+    font-size: 16px;
+}
+
+form#Registrationform input:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+form#Registrationform input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Password wrapper */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.password-wrapper i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.password-wrapper input:focus ~ i {
+    color: #00ffcc;
+}
+
+form#Registrationform br {
+    display: none; 
+}
+
+/* Message styling */
+p#message {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin: 0; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Strength bar and text */
+#strength-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+#strength-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* Login link */
+form#Registrationform p {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+form#Registrationform p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+form#Registrationform p a:hover {
+    color: #00ffcc;
+    text-decoration: underline;
+}
+
+/* Submit button */
+form#Registrationform button {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(45deg, #00ffcc, #ff00ff);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+form#Registrationform button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+}
+footer {
+    text-align: center;
+    border-top: 1px solid white; /* the white line */
+    color: white;
+    padding: 10px;
+    margin-top: 40px;
+    width: 100%;              /* makes the line span the full page */
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+footer:hover {
+    color: #00ffcc;               /* text hover effect */
+    border-color: #ccc;        /* line hover effect */
+}

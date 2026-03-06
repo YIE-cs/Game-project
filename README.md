@@ -20,7 +20,7 @@ A web-based 2D endless runner game where players control a shinobi to avoid obst
 - Aim: Avoid spikes and survive as long as possible to achieve a high score.
 - Restart: Press **R** after Game Over to restart the game.
 
-**##Screenshots**
+## Screenshot
 ### 1. Homepage / Landing Page
 <img width="1084" height="884" alt="home" src="https://github.com/user-attachments/assets/40b644b8-e520-4c9f-aca8-44874d2fb053" />
 
